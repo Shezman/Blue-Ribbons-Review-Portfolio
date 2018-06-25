@@ -1,10 +1,10 @@
 # Blue-Ribbons-Review-Portfolio
-Files and portions of code the I personally worked on for second Blueribbonsreview.com website. Since this project was for a legitimate client, I am unable to upload the entire project due to confidentiality agreements. During my time working on this project, I worked on the following User Stories (Along with the associated files that I created or partially worked on:
+Files and portions of code the I personally worked on for second Blueribbonsreview.com website. Since this project was for a legitimate client, I am unable to upload the entire project due to confidentiality agreements. During my time working on this project, I worked on the following User Stories (Along with the associated files that I created or partially worked on):
 
 User Stories for Blue Ribbons Review
 
 1)	Remove the User ID from being displayed on the Details View for the Admin Controller 
-AdminController > Details.cshtml
+Admin > Details.cshtml
 
 2)	Only Allow User to click the see Amazon button on the _Details partial if the user is logged in, if they are not logged in there should be a hover effect on the button that tells the user to login first
 Shared > _Details.cshtml
