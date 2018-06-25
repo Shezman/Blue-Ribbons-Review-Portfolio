@@ -1,0 +1,59 @@
+﻿@model IEnumerable<BlueRibbonsReview.Models.Campaign>
+
+@{
+    ViewBag.Title = "Welcome to Blue Ribbons Review";
+}
+
+<h2>Sign up today and start browsing the site for great deals!<br /> All our products are 70% off or more!</h2>
+
+@*<div class="container campaign-index-details">
+        @{
+            Html.RenderAction("GetLandingPartial");
+        }
+    </div>*@
+
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            @{int slideNum = 1; }
+            @foreach (var Product in Model)
+            {
+                string classy = "";
+                
+                if (Model.First() == Product)
+                {
+                    classy = "item active";
+                }
+                else
+                {
+                    classy = "item";
+                }
+                <div class="@classy">
+                    <img class="d-block w-100" src="@Product.ImageUrL"  alt="@slideNum slide">
+                </div>
+                slideNum = slideNum + 1;
+            }
+
+        </div>
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" ></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    
+
+
+<button type="button" class="btn btn-primary" onclick="location.href='@Url.Action("Index", "Campaigns")'">
+    See More Deals
+</button>
+<button type="button" class="btn btn-primary" onclick="location.href='@Url.Action("Register", "Account")'">
+    Sign Up Today
+</button>
+
+
+

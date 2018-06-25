@@ -1,0 +1,36 @@
+﻿@model IEnumerable<BlueRibbonsReview.Models.Referral>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ReferralName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReferralEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ApplicationUser.FullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ApplicationUser.Email)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReferralName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReferralEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApplicationUser.FullName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApplicationUser.Email)
+        </td>
+    </tr>
+}
+
+</table>

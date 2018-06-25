@@ -1,0 +1,70 @@
+﻿@model BlueRibbonsReview.ViewModels.AnalyticsViewModel
+
+
+@{
+    ViewBag.Title = "BuyerDetails";
+}
+
+<h2>Product Details</h2>
+
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ReviewAverage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReviewAverage)
+        </dd>
+
+
+
+    </dl>
+</div>
+<div class="container campaign-index-details">
+    @{
+        Html.RenderPartial("_Details", Model.Campaign);
+    }
+</div>
+
+<h3>Reviews</h3>
+@foreach (var review in Model.Campaign.Reviews)
+{
+    <div>
+        <hr />
+        <li>
+            @Html.LabelFor(p => review.ReviewDate): @Html.DisplayFor(p => review.ReviewDate) |
+            @Html.LabelFor(p => review.ProductRating):
+            @for (int i = 0; i < review.ProductRating; i++)
+            {
+                <div class="star-rating__wrap ">
+                    <span style="cursor:default" class="star-rating__ico fa fa-star fa-lg" title="@review.ProductRating out of 5 stars" value: @review.ProductRating></span>
+                </div>
+            }
+            | @Html.LabelFor(p => review.ReviewDetails):
+
+            @{
+                var message = review.ReviewDetails;
+                var messageLength = review.ReviewDetails.Length;
+
+                if (messageLength > 40)
+                {
+                    message = message.Substring(0, 40);
+                    <span>@message...</span>
+                }
+                else
+                {
+                    @Html.DisplayFor(p => review.ReviewDetails);
+                }
+            }
+        </li>
+    </div>
+
+}
+<br/>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

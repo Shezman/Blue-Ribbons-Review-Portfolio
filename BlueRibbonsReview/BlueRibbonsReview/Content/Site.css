@@ -1,0 +1,1022 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Style buttons uniformly across site - redefine Bootstrap btns used in project */
+.btn,
+.btn-primary, 
+.btn-default {
+    background: #4172a8;
+    color: #fff;
+    min-width: 10%;
+    padding: 6px 12px;
+  
+}
+
+    .btn:hover,
+    .btn-primary:hover, 
+    .btn-default:hover {
+        background: #286090;
+        border-color: #204d74;
+        color: #fff;
+        
+    }
+
+/* On the Index page for Campaigns center the "Quick Look" on the panel-body for the campaigns */
+.btn,
+.btn-primarycenter, 
+.btn-defaultcenter {
+    background: #4172a8;
+    color: #fff;
+    min-width: 10%;
+    padding: 6px 12px;
+    text-align: center;
+
+  
+}
+
+    .btn:hover,
+    .btn-primarycenter:hover, 
+    .btncenter:hover {
+        background: #286090;
+        border-color: #204d74;
+        color: #fff;
+        
+    }
+
+/*Buttons for index page of admin, color matching navbar. / Added .btn-default to effect sortby buttons*/
+    .btn-dark {
+    background: #3e3f3a;
+    border-color: #204d74;
+    color: #fff;
+    }
+
+    .btn-dark:hover {
+        background: #3e3f3a;
+        border-color: #204d74;
+        color: #fff;
+    }
+
+    .btn-darksmall {
+    background: #3e3f3a;
+    border-color: #204d74;
+    color: #fff;
+    padding: 1px 5px;
+    }
+    .btn-darksmall:hover {
+    background: #3e3f3a;
+    border-color: #204d74;
+    color: #fff;
+    padding: 1px 5px;
+    }
+
+    /* This is to provide the sortby buttons with a dark background.  Currently matching the navbar color.*/
+    #sortBy {
+    background: #3e3f3a;
+    }
+
+/* Render Bootstrap nav-pills buttons like other buttons across site */
+.nav-pills > li > a,
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:focus {
+    background: #4172a8;
+    color: #fff;
+    min-width: 10%;
+    padding: 6px 12px;
+}
+
+/* Override Bootstrap Sandstone theme default link colors */
+a {
+    color: #4172a8;
+}
+
+a:hover {
+    color: #286090;
+}
+
+/* Added to keep checkbox on login from overlapping the "Remember me" string.*/
+
+.radio input[type="radio"], 
+.radio-inline input[type="radio"], 
+.checkbox input[type="checkbox"], 
+.checkbox-inline input[type="checkbox"]
+{
+    position: absolute;
+    margin-left: -10px;
+    margin-top: 4px \9;
+
+}
+
+
+
+.nav-pills > li > a:hover,
+.nav-pills > li.active > a:hover {
+    background: #286090;
+    border-color: #204d74;
+}
+
+/* Indent dropdown menus items considered to be submenus (like Create on the Seller Dashboard) */
+.submenu {
+    padding-left: 35px; 
+}
+
+/* Adjust dropdown menu hover/focus background */
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    background: #f6f6f6;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.container {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+/*Styling for landing carousel*/
+.classy, img {
+    max-height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#myCarousel, .carousel slide {
+    margin-bottom: 50px;
+}
+
+
+
+/*Register Form Formating*/
+.container .btn-left {
+    margin-left: 15px;
+}
+
+.container .radio .radio-form {
+    margin-left:15px;
+}
+/*"Seller Dashboard" navbar menu--stylings for "Campaigns" submenu*/
+.caret-right {
+    border-left: 4px solid;
+    border-bottom: 4px solid transparent;
+    border-top: 4px solid transparent;
+}
+
+.dropdown-submenu {
+    position: relative;
+}
+
+    .dropdown-submenu .dropdown-menu {
+        top: 0;
+        left: 100%;
+        margin-top: -1px;
+    }
+
+.dropdown-menu > li#sub-item1 > a {
+    background: white;
+}
+
+.dropdown-menu > li#sub-item2 > a {
+    background: white;
+}
+
+.dropdown-menu > li#sub-item1 > a:hover, .dropdown-menu > li > a:focus {
+    background: #f6f6f6;
+}
+
+.dropdown-menu > li#sub-item2 > a:hover, .dropdown-menu > li > a:focus {
+    background: #f6f6f6;
+}
+/*END "Seller Dashboard" navbar menu--stylings for "Campaigns" submenu*/
+
+
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+.dl-horizontal {
+    text-align:left;
+    font-weight:600;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 370px;
+    min-width: 300px;
+}
+
+/*Remove borders from _Details, _Panel pages by overriding the BootStrap*/
+#bootstrap-override .modal-header, .list-group-item {
+    border: none;
+}
+
+/* Sets the design for the sale price in the details and index page of campaign*/
+.specialprice {
+    font-weight:600;
+    color:#4172a8;
+    font-size:20px;
+    margin:0.50em 0;
+}
+
+/* Located in the details modal view of the campaign */
+.details-description {
+    font-weight:300;
+}
+
+.btn-amazon {
+    background-color: black; 
+    color: #FFF;
+}
+
+/* Campaign INDEX page */
+.campaign-panel {
+    text-align: center;
+    /*box-shadow:3px 5px 5px grey; 
+    border-radius:5px; 
+    border:1px solid #000; 
+    margin:10px;
+    margin-left:5px;
+    margin-right:5px;*/
+    max-height: 350px;
+    margin: 10px 10px;
+    padding: 10px;
+    border: 1px solid #e9e9e9;
+    background: white;
+    
+   
+}
+
+.panel-body {
+    text-align: center;
+}
+
+.panel-body:hover {
+    color: #204d74;
+    box-shadow: 4px 0px 0px 0px #204d74;
+    transition: ease-in-out box-shadow 0.33s;
+    -webkit-transition: ease-in-out box-shadow 0.33s;
+    -moz-transition: ease-in-out box-shadow 0.33s;
+    -o-transition: ease-in-out box-shadow 0.33s;
+     text-align:center;
+
+}
+
+.black {
+    color: black;
+}
+
+/*div[class|='panel-body'] {
+    padding:8px;
+}*/
+
+    /*sort dropdown and search*/
+.filterArea {
+    display: inline-block;
+    padding: 0 7px;
+}
+
+.filterArea .dropdown-menu {
+    background-color: #fff;
+}
+
+.filterArea .dropdown-menu > li > a {
+    color: #000000;
+}
+
+.filterArea .dropdown-menu > li > a:hover{
+	background-color: white;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+#campaignSearch {
+    padding-right: 10%;
+}
+#searchButton {
+    margin-left: -10%;
+    background: #ffffff;
+    color: #808080;
+
+    border: 0;
+    border-left: none;
+    cursor: pointer;
+}
+
+.modal-title {
+    font-weight:600; 
+    font-size:large;
+}
+
+.navbar-left {
+    padding: 5px;
+    height: 100%;
+}
+
+.navbar-default {
+    /*background-color: #4172a8;
+    border-radius: 0;*/
+    border: none;
+    box-shadow: 0 0 16px 0 #888888;
+}
+
+.navbar-default .navbar-brand {
+    color: #ccc;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #fff;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #ccc;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    background-color: #4172a8;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #ccc;
+    background-color: #ccc;
+}
+
+.navbar-default .navbar-text {
+    color: #ccc;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #ccc;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #4172a8;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #ccc;
+}
+
+/* Campaign ABOUT page */
+
+.card-body {
+    padding-bottom: 1em
+}
+
+.about-input {
+    min-width: 280px;
+}
+
+.fa-envelope {
+    padding-right: 8px;
+}
+
+.fa-icon-container:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
+.fa-icon-container {
+    text-align: center;
+    height: 90px;
+    max-width: 400px;
+}
+
+/*Review CREATE page*/
+@media (min-width: 576px) {
+    .details {
+        width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    .details {
+        width: 66%;
+    }
+}
+.details{
+    align-content: center;
+    overflow: auto;
+}
+.dropdown-toggle {
+    color: gainsboro
+}
+
+.reviewImage {
+    width: auto;
+    height: 150px;
+    visibility: hidden;
+}
+
+/*Campaign CREATE page*/
+
+#Description {
+    width: 100%;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+#VendorsPurchaseInstructions {
+    width: 100%;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+.campaign-create {
+    width: 60%;
+    float: left;
+}
+
+.campaign-create-details {
+    width: 35%;
+    float: left;
+}
+
+/*Details partial*/
+#details-bootstrap-overrides .list-group-item {
+    border: none;
+}
+
+.custom-dropdown {
+    /*width: 120px;*/
+    display: none;
+    height: 22px;
+    border: 1px solid black;
+    /*background-image: url('../../images/br_logo_gold.png');*/
+    background-repeat: no-repeat;
+    background-position: right;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+}
+
+.ulCustom-dropdown{
+    /*display: none;*/
+    /*width: 120px;*/
+    background-color: white;
+    border: 1px solid black;
+    border-top: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+}
+
+.custom-dropdown:hover {
+    display: inline;
+}
+
+#promotionCampaignList li:hover {
+    background-color: lightblue;
+    cursor: pointer;
+}
+
+.imgDisplay {
+	vertical-align: middle;
+	width: 50px;
+	height: 50px;
+}
+
+.imageText {
+    display: inline;
+    vertical-align: middle;
+    padding-left: 5px;
+}
+
+
+/* Promotions CREATE page*/
+.promotionCampaignList li {
+    background-color: #4172a8;
+    cursor: pointer;
+}
+
+.item-description {
+    font-weight: 400;
+    text-align: left;
+}
+
+.inputListDropdown {
+    padding: 3px, 20px, 3px, 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px; 
+    font-weight: 700;
+}
+
+/*Promotions/Create Bootstrap override*/
+#caret-override {
+    color: #000000;
+    border-top-color: #ccc;
+    border-top-width: 1px;
+    border-top-style: solid;
+}
+
+.imgThumb {
+    max-height: 50px;
+    max-width: 50px;
+    margin: 10px 0;
+}
+
+#accordion {
+    margin: 10px 0;
+}
+
+.accordion-item {
+    padding-top: 8px;
+}
+
+/*Overriding Bootstrap for Campains/AdminView */
+#AdminView-OpenCampaign input {
+    min-width: 100%;
+}
+
+.dropdown-menu > li > ul > a {
+    display: block;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.42857143;
+    color: #333;
+    white-space: nowrap;
+}
+
+.dropdown-menu > li > ul:hover {
+    text-decoration: none;
+    background-color: #f5f5f5;
+}
+
+.dropdown-menu > li > ul > a:hover {
+    text-decoration: none;
+    background-color: #f5f5f5;
+}
+
+
+/* Details partial - from Campaigns INDEX */
+@media (min-width: 991px) {
+    .campaign-index-details .details-top {
+        width: 33%;
+        float: left;
+    }
+}
+
+.txt-center {
+    text-align: left;
+	line-height: 4.2em;
+	
+}
+
+.hide {
+    display: none;
+}
+
+.clear {
+    float: none;
+    clear: both;
+}
+
+.rating {
+    width: 90px;
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    text-align: center;
+    position: relative;
+}
+
+    .rating > label {
+        float: right;
+        padding: 0;
+        margin: 0;
+        position: relative;
+        width: 1.1em; 
+        cursor: pointer;
+        color: #000;
+    }
+
+        .rating > label:hover,
+        .rating > label:hover ~ label,
+        .rating > input.radio-btn:checked ~ label {
+            color: transparent;
+        }
+
+            .rating > label:hover:before,
+            .rating > label:hover ~ label:before,
+            .rating > input.radio-btn:checked ~ label:before,
+            .rating > input.radio-btn:checked ~ label:before {
+                content: "\2605";
+                position: absolute;
+                left: 0;
+                color: #FFD700;
+            }
+
+
+
+.fa-user-circle {
+    color: white; 
+}
+
+.table-sizing{
+    width:auto;
+}
+
+/* div holding the title and tagline - in _Layout  */
+.topic {
+	margin-top: -40px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #e9e9e9;
+	background: #e9e9e9 url("../Images/noise.jpg");
+	box-sizing: border-box;
+	padding-top: 63px;
+	min-height: 120px;
+	vertical-align: middle;
+}
+
+    .topic h3 {
+        margin-top: 10px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .topic .tagline {
+        padding-bottom: 10px;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+	
+
+/* footer */
+footer {
+    padding: 20px 0 10px 0;
+    margin-top: 0;
+    background: #e9e9e9 url("../Images/noise.jpg") repeat;
+    border-top: 1px solid #dcdcdc;
+    font-size: 13px;
+    background: #e9e9e9 url("../Images/noise.jpg") repeat;
+    -webkit-box-shadow: 0 0 16px rgba(0, 0, 0, 0.175);
+    -moz-box-shadow: 0 0 16px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.175);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Campaign About Page */
+h1.title-lg {
+    font-size: 23px;
+}
+
+h3.title-lg {
+    font-size: 18px;
+    margin-top: 35px;
+    margin-bottom: 20px;
+}
+
+.title-lg {
+    margin-bottom: 35px;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    padding: 0 20px 15px;
+    border-bottom: 1px solid #e9e9e9;
+    font-weight: 700;
+}
+
+.lead {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.4;
+    color: #4172a8;
+}
+
+.about-body {
+    line-height: 1.8;
+}
+
+.about-container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.contactForm {
+    margin: 0 auto;
+    max-width: 450px;
+}
+
+::-webkit-input-placeholder {
+    color: #FF0000;
+    opacity: 1;
+}
+
+/* Panel Group on Campaign About page */
+.panel-group {
+	-webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.05);
+	-moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.05);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0.05);
+	margin-bottom: 0;
+}
+
+.panel-group .panel {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.panel-group .panel + .panel {
+    margin-top: -2px;
+}
+
+.panel-group .panel-heading {
+    padding: 0;
+    background: white;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+    .panel-group .panel-body {
+        text-align:center;
+        font-size: 13px;
+        background: #f6f6f6;
+        -webkit-box-shadow: inset 0 0 3px 1px rgba(0, 0, 0, 0.03);
+        -moz-box-shadow: inset 0 0 3px 1px rgba(0, 0, 0, 0.03);
+        box-shadow: inset 0 0 3px 1px rgba(0, 0, 0, 0.03);
+        text-transform: none;
+        
+        
+    }
+
+.panel-group .panel-heading a {
+    position: relative;
+    display: block;
+    padding: 12px 40px 12px 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #606060;
+    line-height: 1.5;
+    text-transform: none;
+    text-decoration: none;
+    
+}
+
+.panel-group .panel-heading a:after {
+    display: block;
+    content: "-";
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 20px;
+    color: white;
+    text-align: center;
+    background-color: #606060;
+    -webkit-transition: background 300ms;
+    -moz-transition: background 300ms;
+	-o-transition: background 300ms;
+    transition: background 300ms;
+    
+}
+
+.panel-group .panel-heading .collapsed:after {
+    content: "+" !important;
+}
+
+.panel-group .panel-heading a:hover {
+    color: #4172a8;
+
+}
+
+.panel-group .panel-heading a:hover:after,
+.panel-group .panel-heading .collapsed:hover:after {
+    background: #4172a8;
+}
+/*Review "See More Details with Chevron*/
+.chevron::before {
+    margin-top: 3.4px;
+    border-style: solid;
+	border-width: 0.15em 0.15em 0 0;
+	content: '';
+	display: inline-block;
+	height: 0.60em;
+	left: 0.50em;
+	position: relative;
+	top: 0.15em;
+	transform: rotate(-45deg);
+	vertical-align: top;
+	width: 0.60em;
+}
+
+.chevron.bottom:before {
+	top: ;
+	transform: rotate(135deg);
+}
+
+.chevron:hover {
+    color: gold;
+    cursor: pointer;
+}
+
+.review-details {
+    font-size: 12px;
+    text-align: center;
+    font-weight: bold
+}
+
+.review-details:hover {
+    color: gold;
+    cursor: pointer;
+}
+
+/*For the "See more details" dropdown*/
+hr.style-seven {
+    overflow: visible; /* For IE */
+    height: 30px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+
+    hr.style-seven:before { /* Not really supposed to work, but does */
+        display: block;
+        content: "";
+        height: 30px;
+        margin-top: -31px;
+        border-style: solid;
+        border-color: black;
+        border-width: 0 0 1px 0;
+        border-radius: 20px;
+    }
+*
+/*For the Review borders*/
+hr.style-four {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.accordion-item {
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#e9e9e9), to(#fff));
+}
+/* Star rating in SellerIndex*/
+.stars-container {
+    position: relative;
+    display: inline-block;
+    color: transparent;
+}
+
+	.stars-container:before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		content: '☆☆☆☆☆';
+		color: gold;
+	}
+
+	.stars-container:after {
+		position: absolute;
+		top: 0;
+		left: 0;
+		content: '★★★★★';
+		color: gold;
+		overflow: hidden;
+	}
+
+/* Seller Index "See More Details" Styling*/
+
+.SellerIndexDetails {
+    display: inline;
+}
+
+.SellerIndexDetails:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+    /*Star rating for reviews*/
+
+.ui-accordion .ui-accordion-header {
+    margin: 10px 0;
+}
+
+
+.label-rating-label {
+    position: relative;
+    display: inline-block;
+    color: transparent;
+    content: "\f006";
+}
+
+#hoverb{
+    visibility:hidden;
+    position:static;
+    color: #888888;
+}
+
+#hoverb:hover{
+    visibility:visible;
+}
+
+.dropdown filterArea {
+    display: inline block
+}
+
+.columncenter {
+    text-align: center;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.icon:hover {
+    color: #4172a8;
+}
+.some-div:hover {
+	box-shadow: 5px 10px 18px #888888;
+    color: #888888;
+}
+/*star review*/
+form .stars {
+  background: url("/resources/stars.png") repeat-x 0 0;
+  width: 150px;
+  margin: 0;
+}
+ 
+form .stars input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+form .stars input[type="radio"].star-5:checked ~ span {
+  width: 100%;
+}
+form .stars input[type="radio"].star-4:checked ~ span {
+  width: 80%;
+}
+form .stars input[type="radio"].star-3:checked ~ span {
+  width: 60%;
+}
+form .stars input[type="radio"].star-2:checked ~ span {
+  width: 40%;
+}
+form .stars input[type="radio"].star-1:checked ~ span {
+  width: 20%;
+}
+form .stars label {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  text-indent: -999em;
+  float: left;
+  position: relative;
+  z-index: 10;
+  background: transparent;
+  cursor: pointer;
+}
+form .stars label.star-5:hover ~ span {
+  width: 100%;
+}
+form .stars label.star-4:hover ~ span {
+  width: 80%;
+}
+form .stars label.star-3:hover ~ span {
+  width: 60%;
+}
+form .stars label.star-2:hover ~ span {
+  width: 40%;
+}
+form .stars label.star-1:hover ~ span {
+  width: 20%;
+}
+form .stars span {
+  display: block;
+  width: 0;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 30px;
+  background: url("/resources/stars.png") repeat-x 0 -60px;
+}
+
+
+

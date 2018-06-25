@@ -1,0 +1,111 @@
+﻿@model BlueRibbonsReview.ViewModels.AdminViewModel
+
+@{
+    ViewBag.Title = "Details for " + (Html.DisplayFor(model => model.FirstName))+ " " + (Html.DisplayFor(model => model.LastName));
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>AdminViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JoinDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JoinDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CampaignCount)
+        </dt>
+
+        <dd>
+
+            <div class="btn-group">
+                <button type="button" class="btn btn-dark">@Html.DisplayFor(modelItem => Model.CampaignCount)</button>
+                <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu">
+
+                    @*foreach user create link to all campaigns they have made in the dropdown.*@
+                    @{
+                foreach (var campaign in Model.Campaigns)
+                {
+                    <li>@Html.DisplayFor(modelItem => campaign.Name)</li>
+
+                    }
+                    }
+
+                </ul>
+           </div>
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReferralCount)
+        </dt>
+
+        <dd>
+            @*Created drop-downable list of referrals*@
+            <div class="btn-group">
+                <button type="button" class="btn btn-darksmall">@Html.DisplayFor(model => model.ReferralCount)</button>
+                <button type="button" class="btn btn-darksmall dropdown-toggle" data-toggle="dropdown">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu">
+
+                    @*foreach user create link to all referals they have made in the dropdown.*@
+                    @{
+                        foreach (var referrals in Model.Referrals)
+                        {
+                            <li>@Html.DisplayFor(model => referrals.ReferralName)</li>
+
+                        }
+                    }
+
+                </ul>
+            </div>
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserRoleName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserRoleName)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit","Edit", new { @class = "fa fa-pencil-square-o fa-lg" } ) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

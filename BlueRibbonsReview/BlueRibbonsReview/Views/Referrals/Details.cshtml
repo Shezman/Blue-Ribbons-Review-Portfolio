@@ -1,0 +1,64 @@
+﻿@model BlueRibbonsReview.Models.Referral
+
+@{
+    ViewBag.Title = "Referral Details for " + (Html.DisplayFor(model => model.ReferralName));
+    ViewBag.Tagline = "";
+}
+
+@*<h2>Details</h2>*@
+
+<div>
+    @*<h4>Referral</h4>*@
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ReferralName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReferralName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReferralEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReferralEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Message)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Message)
+
+            @{ 
+                var messageCount = Model.Message.Count();
+            }
+        </dd>
+
+        <dt>
+
+            @Html.DisplayName("Referrer Name") 
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApplicationUser.FirstName)  @Html.DisplayFor(model => model.ApplicationUser.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Referrer Email")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApplicationUser.Email)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink(" ", "Edit", new { id = Model.ReferralID }, new { @class = "fa fa-pencil-square-o fa-lg" }) |
+    @Html.ActionLink("See More Referrals", "Index")
+</p>

@@ -1,0 +1,110 @@
+﻿@model IEnumerable<BlueRibbonsReview.Models.Referral>
+
+@{
+    ViewBag.Title = "Referrals";
+    ViewBag.Tagline = "";
+}
+
+@*<h2>Index</h2>*@
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.ActionLink("Referral Name", "Index", new { sortOrder = ViewBag.ReferralNameSortParm })
+        </th>
+        <th>
+            @Html.ActionLink("Email of Referral", "Index", new { sortOrder = ViewBag.ReferralEmailSortParm })
+            
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Message)
+        </th>
+        <th>
+            @Html.ActionLink("User Name", "Index", new { sortOrder = ViewBag.UserNameSortParm })
+        </th>
+        <th>
+            @Html.ActionLink("User Email", "Index", new { sortOrder = ViewBag.UserEmailSortParm })
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReferralName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReferralEmail)
+                @{
+                <a href="mailto:@(item.ReferralEmail)"><i class="fas fa-paper-plane"></i></a>
+                }
+            </td>
+            <td>
+
+                @{
+                    var message = item.Message;
+                    var messageLength = item.Message.Length;
+
+                    if (messageLength > 40)
+                    {
+                        message = message.Substring(0, 40);
+                        <span class="MessagePopover" data-placement="bottom" data-content="@item.Message" data-trigger="hover">@message...</span>
+                    }
+                    else
+                    {
+                        @Html.DisplayFor(modelItem => item.Message)
+                    }
+                }
+
+
+            </td>
+            @*FullName and Email:
+                Used to be able to create Campaigns (db table dbo.Campaign) without an associated Application user (db table dbo.AspNetUser)
+                dbo.Campaign.ApplicationUser_Id is now being populated when campaigns are created and is to be used in place of
+                dbo.Campaign.UserId.  *@
+            <td>
+                @{
+                    if (item.ApplicationUser != null)
+                    {
+                        @Html.ActionLink(Html.DisplayFor(modelItem => item.ApplicationUser.FullName).ToHtmlString(), "Details", "Admin", new { id = item.ApplicationUser.Id }, null)
+                    }
+                    else
+                    {
+                        @Html.Raw("(Empty)");
+                    }
+                }
+            </td>
+            <td>
+                @{
+        if (item.ApplicationUser != null)
+        {
+            @Html.DisplayFor(modelItem => item.ApplicationUser.Email)
+            <span>&nbsp;</span><a href="mailto:@(item.ReferralEmail)" class="fas fa-paper-plane"></a>
+}
+                }
+            </td>
+            <td>
+            
+            @Html.ActionLink(" ", "Edit", new { id = item.ReferralID }, new { @class = "fa fa-pencil-square-o fa-lg" }) |
+            @Html.ActionLink(" ", "Details", new { id = item.ReferralID }, new { @class = "fa fa-info fa-lg" }) |
+            @Html.ActionLink(" ", "Delete", new { id = item.ReferralID }, new { @class = "far fa-trash-alt fa-lg" })
+            </td>
+        </tr>
+                    }
+</table>
+
+&nbsp;&nbsp;@Html.ActionLink("Export Emails to CSV", "ExportEmailListToCSV")
+
+<h4>Converted Referrals</h4>
+
+<p>Percentage of Converted Referrals: @{Html.RenderAction("ConvertedReferrals");}</p>
+
+<div class="container campaign-index-details">
+    @{
+        Html.RenderAction("GetPartialReferrals");
+    }
+</div>
+
+<script>
+    $('.MessagePopover').popover();
+</script>
